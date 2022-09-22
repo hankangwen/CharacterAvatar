@@ -39,6 +39,7 @@ public class AvatarSys : MonoBehaviour
     {
         _girlTarget = Instantiate(Resources.Load("FemaleTarget")) as GameObject;
         if (!_girlTarget) return;
+        _girlTarget.AddComponent<SpinWithMouse>();
         _girlHips = _girlTarget.GetComponentsInChildren<Transform>();
     }
 

@@ -38,7 +38,6 @@ public class AvatarSys : MonoBehaviour {
     }
 
     void Start() {
-
         GirlAvatar();
         BoyAvatar();
         boyTarget.AddComponent<SpinWithMouse>();

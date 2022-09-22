@@ -14,9 +14,4 @@ public class loadAvatar : MonoBehaviour {
             AvatarSys._instance.BoyAvatar();
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

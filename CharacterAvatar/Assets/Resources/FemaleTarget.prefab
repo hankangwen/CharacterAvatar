@@ -776,6 +776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9118375901829611700}
   - component: {fileID: 9157916645339967364}
+  - component: {fileID: 6438198172418455175}
   m_Layer: 0
   m_Name: FemaleTarget
   m_TagString: Untagged
@@ -820,6 +821,20 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!136 &6438198172418455175
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9123636909095389384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.41
+  m_Height: 1.65
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &9123647853776251108
 GameObject:
   m_ObjectHideFlags: 0

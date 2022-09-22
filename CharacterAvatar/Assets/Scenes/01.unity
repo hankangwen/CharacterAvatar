@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb1690c1e430884d891cacf7cee00e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useTxt: 1
   girlSkins:
   - eyes-2
   - hair-2

@@ -11,6 +11,8 @@ public class AvatarSys : MonoBehaviour {
     private Dictionary<string, Dictionary<string, SkinnedMeshRenderer>> girlData = new Dictionary<string, Dictionary<string, SkinnedMeshRenderer>>(); 
     //小女孩所有的资源信息   //部位的名字，部位编号，部位对应的skm
     Transform[] girlHips; //小女孩骨骼信息
+    
+    
     private Dictionary<string, SkinnedMeshRenderer> girlSmr = new Dictionary<string, SkinnedMeshRenderer>();// 换装骨骼身上的skm信息
     //部位的名字，部位对应的skm
     private string[,] girlStr = new string[,] { {"eyes","1"},{"hair","1"},{"top","1"},{"pants","1"},{"shoes","1"},{"face","1"}};
@@ -42,10 +44,8 @@ public class AvatarSys : MonoBehaviour {
         boyTarget.AddComponent<SpinWithMouse>();
         girlTarget.AddComponent<SpinWithMouse>();
         boyTarget.SetActive(false);
-
-
-        
     }
+    
    public  void GirlAvatar() {
         InstantiateGirl();
         SaveData(girlSourceTrans,girlData,girlTarget,girlSmr);

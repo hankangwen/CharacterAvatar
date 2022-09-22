@@ -19,13 +19,13 @@ public class SpinWithMouse : MonoBehaviour {
     }
 
     void Update() {
-        nowPos = Input.mousePosition;
         if (isClick) { //鼠标按下不松手
+            nowPos = Input.mousePosition;
             Vector3 offset = nowPos - oldPos;
             if (Mathf.Abs(offset.x) > Mathf.Abs(offset.y) && Mathf.Abs(offset.x) > length) { //进行旋转
                 transform.Rotate(Vector3.up,-offset.x);
             }
+            oldPos = Input.mousePosition;
         }
-        oldPos = Input.mousePosition;
     }
 }

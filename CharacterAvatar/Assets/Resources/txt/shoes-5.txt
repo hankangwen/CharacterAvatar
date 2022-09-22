@@ -1,0 +1,10 @@
+﻿1
+female_shoes-2_red
+shoes-2
+Female_Hips/Female_RightUpLeg/Female_RightLeg
+Female_Hips/Female_LeftUpLeg/Female_LeftLeg/Female_LeftFoot/Female_LeftToeBase
+Female_Hips/Female_LeftUpLeg/Female_LeftLeg/Female_LeftFoot
+Female_Hips/Female_LeftUpLeg/Female_LeftLeg
+Female_Hips/Female_RightUpLeg/Female_RightLeg/Female_RightFoot/Female_RightToeBase
+Female_Hips/Female_RightUpLeg/Female_RightLeg/Female_RightFoot
+Female_Hips/Female_RightUpLeg/Female_RightLeg

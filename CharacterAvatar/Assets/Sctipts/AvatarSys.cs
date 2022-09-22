@@ -18,17 +18,81 @@ public class AvatarSys : MonoBehaviour
     /// girl的所有资源信息
     /// </summary>
     private Dictionary<string, Dictionary<string, SkinnedMeshRenderer>> _girlData = new Dictionary<string, Dictionary<string, SkinnedMeshRenderer>>();
-
+    
     //初始化信息，部位的名字，部位对应的skm
-    private string[,] _girlStr = new string[,] { {"eyes","1"},{"hair","1"},{"top","1"},{"pants","1"},{"shoes","1"},{"face","1"}};
+    private string[,] _girlStr = { {"eyes","1"},{"hair","1"},{"top","1"},{"pants","1"},{"shoes","1"},{"face","1"}};
 
+    #region Test
+    public string[] girlSkins = {"eyes-2", "hair-2", "top-2", "pants-2", "shoes-2", "face-2"};
+
+    void RefreshAvatar()
+    {
+        foreach (var str in girlSkins)
+        {
+            // var array = str.Split('-');
+            // ChangeMesh(array[0], array[1]);
+            ChangeMesh2(str);
+        }
+    }
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            RefreshAvatar();
+        }
+    }
+
+    void ChangeMesh2(string partName)
+    {
+        var textAsset = Resources.Load<TextAsset>($"txt/{partName}");
+        string[] lines = textAsset.text.Split('\n');
+        
+        int materialCount = Int32.Parse(lines[0]);
+        Material[] materials = new Material[materialCount];
+        for (int i = 0; i < materialCount; i++)
+        {
+            string materialName = lines[1 + i];
+            materials[i] = Resources.Load<Material>($"material/{materialName}");
+        }
+
+        string meshName = lines[materialCount + 1];
+        Mesh mesh = Resources.Load<Mesh>($"mesh/{meshName}");
+
+        var targetTran = _girlTarget.transform;
+        var rootBone = targetTran.Find(lines[materialCount + 2]);
+        
+        var boneList = new List<Transform>();
+        for (int i = materialCount + 3; i < lines.Length; i++)
+        {
+            boneList.Add(targetTran.Find(lines[i]));
+        }
+        
+        //换装实现
+        string part = partName.Split('-')[0];
+        SkinnedMeshRenderer curSkm;
+        if (!_girlSmr.TryGetValue(part, out curSkm))
+        {
+            GameObject partGo = new GameObject(part);
+            partGo.transform.parent = _girlTarget.transform;
+            _girlSmr.Add(part, partGo.AddComponent<SkinnedMeshRenderer>());
+            curSkm = _girlSmr[part];
+        }
+
+        curSkm.rootBone = rootBone;
+        curSkm.bones = boneList.ToArray();
+        curSkm.materials = materials;
+        curSkm.sharedMesh = mesh;
+    }
+    #endregion
+     
     private void Start()
     {
-        InstantiateSource();
+        // InstantiateSource();
         InstantiateTarget();
         
-        SaveData();
-        InitAvatar();
+        // SaveData();
+        // InitAvatar();
     }
 
     private void InstantiateSource()

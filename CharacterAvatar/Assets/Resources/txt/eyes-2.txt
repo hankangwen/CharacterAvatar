@@ -1,0 +1,6 @@
+﻿1
+female_eyes_brown
+eyes
+Female_Hips/Female_Spine/Female_Spine1/Female_Neck/Female_Head/Female_EyeRight
+Female_Hips/Female_Spine/Female_Spine1/Female_Neck/Female_Head/Female_EyeLeft
+Female_Hips/Female_Spine/Female_Spine1/Female_Neck/Female_Head/Female_EyeRight

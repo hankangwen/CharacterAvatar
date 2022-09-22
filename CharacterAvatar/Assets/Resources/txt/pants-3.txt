@@ -1,0 +1,12 @@
+﻿1
+female_pants-1_green
+pants-1
+Female_Hips
+Female_Hips/Female_RightUpLeg
+Female_Hips
+Female_Hips/Female_RightUpLeg/Female_RightLeg
+Female_Hips/Female_RightUpLeg/Female_RightLeg/Female_RightFoot
+Female_Hips/Female_LeftUpLeg
+Female_Hips/Female_LeftUpLeg/Female_LeftLeg
+Female_Hips/Female_LeftUpLeg/Female_LeftLeg/Female_LeftFoot
+Female_Hips/Female_Spine

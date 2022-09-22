@@ -330,6 +330,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb1690c1e430884d891cacf7cee00e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  girlSkins:
+  - eyes-2
+  - hair-2
+  - top-2
+  - pants-2
+  - shoes-2
+  - face-1
 --- !u!4 &1467635850
 Transform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,15 @@
 # CharacterAvatar
-CharacterAvatar-Unity换装
+CharacterAvatar-Unity角色换装实现
 
+### 介绍
+提供了加载Model预制到场景中作为数据备份，
+
+以及提供了把Model信息拆分为txt、mesh、material，加载到Target骨架上的功能。
+![image](https://user-images.githubusercontent.com/22899493/191877416-a9e133fa-7183-4041-a6b9-f85c5f79ea28.png)
+
+![image](https://user-images.githubusercontent.com/22899493/191877308-7604a3bd-ea01-42c5-9232-80b2a48ca968.png)
+
+GenerateSkinDataEditor是拆分工具，工具用法见下方：
 ### 工具用法
 GenerateSkinDataEditor 会生成mesh和txt。
 
@@ -28,6 +37,9 @@ Female_Hips/Female_LeftUpLeg/Female_LeftLeg
 Female_Hips/Female_LeftUpLeg/Female_LeftLeg/Female_LeftFoot
 Female_Hips/Female_Spine
 ```
+
+
+
 
 ### 链接
 https://github.com/getker/CharacterAvatar
